@@ -32,6 +32,10 @@ Partial Class CookieClicker
         Me.lbl_Passive_One_Level = New System.Windows.Forms.Label()
         Me.lbl_Click_Upgrade_Cost = New System.Windows.Forms.Label()
         Me.lbl_Passive_One_Upgrade_Cost = New System.Windows.Forms.Label()
+        Me.Real_Cookie_Btn = New FirstProject.RoundButton()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.lbl_donate_cookies = New System.Windows.Forms.Label()
+        Me.btn_donate_cookie = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn_cookie_click
@@ -120,12 +124,44 @@ Partial Class CookieClicker
         Me.lbl_Passive_One_Upgrade_Cost.Text = "Price: 10"
         Me.lbl_Passive_One_Upgrade_Cost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Real_Cookie_Btn
+        '
+        Me.Real_Cookie_Btn.Image = Global.FirstProject.My.Resources.Resources.cookie
+        Me.Real_Cookie_Btn.Location = New System.Drawing.Point(631, 58)
+        Me.Real_Cookie_Btn.Name = "Real_Cookie_Btn"
+        Me.Real_Cookie_Btn.Size = New System.Drawing.Size(272, 274)
+        Me.Real_Cookie_Btn.TabIndex = 8
+        Me.Real_Cookie_Btn.Text = "RoundButton1"
+        Me.Real_Cookie_Btn.UseVisualStyleBackColor = True
+        '
+        'lbl_donate_cookies
+        '
+        Me.lbl_donate_cookies.AutoSize = True
+        Me.lbl_donate_cookies.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_donate_cookies.Location = New System.Drawing.Point(226, 133)
+        Me.lbl_donate_cookies.Name = "lbl_donate_cookies"
+        Me.lbl_donate_cookies.Size = New System.Drawing.Size(311, 46)
+        Me.lbl_donate_cookies.TabIndex = 9
+        Me.lbl_donate_cookies.Text = "Cookies Donated: 0"
+        '
+        'btn_donate_cookie
+        '
+        Me.btn_donate_cookie.Location = New System.Drawing.Point(291, 190)
+        Me.btn_donate_cookie.Name = "btn_donate_cookie"
+        Me.btn_donate_cookie.Size = New System.Drawing.Size(179, 79)
+        Me.btn_donate_cookie.TabIndex = 10
+        Me.btn_donate_cookie.Text = "Click To Donate"
+        Me.btn_donate_cookie.UseVisualStyleBackColor = True
+        '
         'CookieClicker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.ClientSize = New System.Drawing.Size(982, 470)
+        Me.Controls.Add(Me.btn_donate_cookie)
+        Me.Controls.Add(Me.lbl_donate_cookies)
+        Me.Controls.Add(Me.Real_Cookie_Btn)
         Me.Controls.Add(Me.lbl_Passive_One_Upgrade_Cost)
         Me.Controls.Add(Me.lbl_Click_Upgrade_Cost)
         Me.Controls.Add(Me.lbl_Passive_One_Level)
@@ -150,4 +186,8 @@ Partial Class CookieClicker
     Friend WithEvents lbl_Passive_One_Level As Label
     Friend WithEvents lbl_Click_Upgrade_Cost As Label
     Friend WithEvents lbl_Passive_One_Upgrade_Cost As Label
+    Friend WithEvents Real_Cookie_Btn As RoundButton
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents lbl_donate_cookies As Label
+    Friend WithEvents btn_donate_cookie As Button
 End Class

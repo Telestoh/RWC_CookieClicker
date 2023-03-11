@@ -2,6 +2,7 @@
     'global variable
     Public totalCookies, ClickValue, ClickLevel As Integer
     Public PassiveOneVal, PassiveOneLevel As Integer
+    Public donatedCookies As Integer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         totalCookies = 0
         ClickValue = 1
@@ -9,6 +10,8 @@
 
         PassiveOneVal = 0
         PassiveOneLevel = 1
+
+        donatedCookies = 0
         'comment in visual basic
         'Private Sub means funciton
         'Form1_Load just means when you start the program
@@ -36,6 +39,22 @@
         totalCookies = totalCookies + PassiveOneVal
         Cookie_Value.Text = "Cookies: " + totalCookies.ToString
     End Sub
+
+    Private Sub Real_Cookie_Btn_Click(sender As Object, e As EventArgs) Handles Real_Cookie_Btn.Click
+        cookie_click()
+    End Sub
+
+    Private Sub btn_donate_cookie_Click(sender As Object, e As EventArgs) Handles btn_donate_cookie.Click
+        If totalCookies >= 0 Then
+            donatedCookies = donatedCookies + totalCookies
+            lbl_donate_cookies.Text = "Cookies Donated: " + donatedCookies.ToString
+            totalCookies = 0
+            Cookie_Value.Text = "Cookies: " + totalCookies.ToString
+        End If
+    End Sub
+
+
+
 
     'helper function
     Private Sub set_Timer(interval As Integer)
